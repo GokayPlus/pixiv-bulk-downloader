@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="optionsTitle">Pixiv Bulk Downloader Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="options-container">
+      <header class="options-header">
+        <h1 data-i18n="optionsHeading">Pixiv Bulk Downloader</h1>
+        <p data-i18n="optionsSubheading">Customize how downloads behave and discover more projects.</p>
+      </header>
+
+      <section class="card" id="general-preferences">
+        <h2 data-i18n="optionsGeneralTitle">General preferences</h2>
+        <form id="settings-form" novalidate>
+          <label class="field">
+            <span class="field__label" data-i18n="optionsLanguageLabel">Interface language</span>
+            <select name="language" id="language-select">
+              <option value="en" data-i18n="optionsLanguageEn" selected>English</option>
+              <option value="ja" data-i18n="optionsLanguageJa">日本語</option>
+              <option value="zh_CN" data-i18n="optionsLanguageZhCN">简体中文</option>
+            </select>
+            <small class="field__hint" data-i18n="optionsLanguageHint">Override the locale used for the overlay and toolbar.</small>
+          </label>
+
+          <label class="field">
+            <span class="field__label" data-i18n="optionsRangeLabel">Default page range</span>
+            <select name="range" id="range-select">
+              <option value="all" data-i18n="optionsRangeAll">Download all pages</option>
+              <option value="prompt" data-i18n="optionsRangePrompt">Ask every time</option>
+              <option value="custom" data-i18n="optionsRangeCustom">Use custom range</option>
+            </select>
+            <small class="field__hint" data-i18n="optionsRangeHint">When set to “custom”, the overlay remembers your last range.</small>
+          </label>
+
+          <label class="field field--toggle">
+            <span class="field__label" data-i18n="optionsAntiTheftLabel">Add anti-theft suffix to filenames</span>
+            <input type="checkbox" name="antiTheft" id="anti-theft-checkbox" />
+            <small class="field__hint" data-i18n="optionsAntiTheftHint">Appends <code>_pixiv-only</code> to each saved file.</small>
+          </label>
+
+          <label class="field field--toggle">
+            <span class="field__label" data-i18n="optionsOverlayLabel">Show on-canvas download button</span>
+            <input type="checkbox" name="overlay" id="overlay-checkbox" />
+            <small class="field__hint" data-i18n="optionsOverlayHint">Disable if you prefer using the toolbar icon only.</small>
+          </label>
+        </form>
+      </section>
+
+      <section class="card" id="download-preferences">
+        <h2 data-i18n="optionsDownloadTitle">Download behavior</h2>
+        <form id="download-form" novalidate>
+          <label class="field">
+            <span class="field__label" data-i18n="optionsRootFolderLabel">Root folder name</span>
+            <input type="text" name="rootFolder" id="root-folder-input" maxlength="60" />
+            <small class="field__hint" data-i18n="optionsRootFolderHint">Defaults to “Pixiv”. Windows-reserved names are sanitized automatically.</small>
+          </label>
+
+          <label class="field field--toggle">
+            <span class="field__label" data-i18n="optionsRetryLabel">Retry failed URLs</span>
+            <input type="checkbox" name="retryFailed" id="retry-failed-checkbox" />
+            <small class="field__hint" data-i18n="optionsRetryHint">Makes up to 3 extra attempts using alternate URLs before giving up.</small>
+          </label>
+        </form>
+      </section>
+
+      <section class="card card--highlight" id="creator-spotlight">
+        <h2 data-i18n="optionsCreatorTitle">Creator spotlight</h2>
+        <p class="creator-blurb" data-i18n="optionsCreatorBlurb">Hi! I’m Plus(Anachter), the developer behind Pixiv Bulk Downloader. I made this extension because I was too lazy to right click and download 9 images :3</p>
+        <div class="promo-grid">
+          <article class="promo-card">
+            <h3>anachter.dev</h3>
+            <p data-i18n="optionsCreatorSiteDescription">Portfolio, blog posts, and upcoming tools.</p>
+            <a
+              href="https://anachter.dev"
+              target="_blank"
+              rel="noopener"
+              data-i18n="optionsVisitSite"
+              class="promo-link__cta"
+            >Visit site</a>
+          </article>
+          <article class="promo-card" id="promo-extra-projects">
+            <h3 data-i18n="optionsProjectsTitle">Other projects</h3>
+            <ul class="promo-links" id="promo-project-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" id="support-links">
+        <h2 data-i18n="optionsSupportTitle">Support & feedback</h2>
+        <ul>
+          <li><a href="https://github.com/gokayplus/pixiv-bulk-downloader/issues" target="_blank" rel="noopener" data-i18n="optionsSupportBugs">Report a bug</a></li>
+          <li><a href="https://github.com/gokayplus/pixiv-bulk-downloader/discussions" target="_blank" rel="noopener" data-i18n="optionsSupportFeature">Request a feature</a></li>
+          <li><a href="https://github.com/gokayplus/pixiv-bulk-downloader/releases" target="_blank" rel="noopener" data-i18n="optionsSupportChangelog">Read the changelog</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="options-footer">
+      <button id="reset-button" type="button" data-i18n="optionsResetLabel">Reset to defaults</button>
+      <span class="status-message" id="status-message" aria-live="polite"></span>
+    </footer>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

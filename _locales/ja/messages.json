@@ -1,0 +1,159 @@
+{
+  "extName": {
+    "message": "Pixiv一括ダウンローダー"
+  },
+  "extDescription": {
+    "message": "表示中のPixiv作品の画像をワンクリックでまとめてダウンロードします。"
+  },
+  "actionTitle": {
+    "message": "Pixivの画像をダウンロード"
+  },
+  "overlayAriaLabel": {
+    "message": "Pixivの画像をダウンロード"
+  },
+  "dialogTitle": {
+    "message": "画像をダウンロード"
+  },
+  "dialogSummary": {
+    "message": "画像を$COUNT$件見つけました。既定ではすべてが選択されています。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "dialogOptionAll": {
+    "message": "すべての画像"
+  },
+  "dialogOptionRange": {
+    "message": "範囲を指定"
+  },
+  "dialogErrorInvalidNumbers": {
+    "message": "有効な数値を入力してください。"
+  },
+  "dialogErrorRangeOrder": {
+    "message": "開始値は終了値以下である必要があります。"
+  },
+  "dialogButtonCancel": {
+    "message": "キャンセル"
+  },
+  "dialogButtonConfirm": {
+    "message": "ダウンロード"
+  },
+  "toastRangeEmpty": {
+    "message": "選択した範囲に画像がありません。"
+  },
+  "toastDownloadStartFailed": {
+    "message": "ダウンロードを開始できませんでした。"
+  },
+  "toastDownloadingCount": {
+    "message": "$COUNT$件の画像をダウンロードしています...",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorMissingPreload": {
+    "message": "Pixivの事前読み込みメタデータが見つかりません。"
+  },
+  "errorParsePreload": {
+    "message": "Pixivのメタデータを解析できませんでした: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoIllustrationData": {
+    "message": "このページにはイラストのデータが公開されていません。"
+  },
+  "errorNoDownloadableImages": {
+    "message": "この作品でダウンロード可能な画像が見つかりませんでした。"
+  },
+  "errorUnsupportedPage": {
+    "message": "この拡張機能はPixivの作品詳細ページのみ対応しています。"
+  },
+  "errorDataFetchFailed": {
+    "message": "Pixivのデータを取得できませんでした。"
+  },
+  "errorPixivRequestFailed": {
+    "message": "Pixivへのリクエストに失敗しました（$STATUS$）。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorPixivResponse": {
+    "message": "Pixivの応答がエラーを返しました。"
+  },
+  "errorNoAjaxBody": {
+    "message": "Pixivのイラストデータが見つかりませんでした。"
+  },
+  "fallbackArtworkTitle": {
+    "message": "Pixiv作品 $ILLUSTID$",
+    "placeholders": {
+      "illustid": {
+        "content": "$1"
+      }
+    }
+  },
+  "fallbackUnknownCreator": {
+    "message": "作者不明"
+  },
+  "errorDownloadImageFailed": {
+    "message": "画像を取得できませんでした（$STATUS$）。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorActiveTabMissing": {
+    "message": "アクティブなタブが見つかりませんでした。"
+  },
+  "errorNoImagesForDownload": {
+    "message": "ダウンロードする画像がありません。"
+  },
+  "errorUnknown": {
+    "message": "不明なエラー"
+  },
+  "optionsTitle": { "message": "Pixiv一括ダウンローダー設定" },
+  "optionsHeading": { "message": "Pixiv一括ダウンローダー" },
+  "optionsSubheading": { "message": "ダウンロード動作を調整し、開発者のほかのプロジェクトをチェックできます。" },
+  "optionsGeneralTitle": { "message": "基本設定" },
+  "optionsLanguageLabel": { "message": "インターフェース言語" },
+  "optionsLanguageEn": { "message": "English" },
+  "optionsLanguageJa": { "message": "日本語" },
+  "optionsLanguageZhCN": { "message": "簡体字中国語" },
+  "optionsLanguageHint": { "message": "オーバーレイやツールバーで使用する言語を上書きします。" },
+  "optionsRangeLabel": { "message": "既定のページ範囲" },
+  "optionsRangeAll": { "message": "すべてのページをダウンロード" },
+  "optionsRangePrompt": { "message": "毎回確認する" },
+  "optionsRangeCustom": { "message": "カスタム範囲を使用" },
+  "optionsRangeHint": { "message": "「カスタム」を選ぶと最後に指定した範囲を記憶します。" },
+  "optionsAntiTheftLabel": { "message": "ファイル名に盗難防止サフィックスを追加" },
+  "optionsAntiTheftHint": { "message": "各ファイルに「_pixiv-only」を付与します。" },
+  "optionsOverlayLabel": { "message": "キャンバス上のボタンを表示" },
+  "optionsOverlayHint": { "message": "ツールバーアイコンだけを使いたい場合は無効にしてください。" },
+  "optionsDownloadTitle": { "message": "ダウンロード動作" },
+  "optionsRootFolderLabel": { "message": "ルートフォルダー名" },
+  "optionsRootFolderHint": { "message": "既定値は「Pixiv」です。Windowsの予約語は自動で調整されます。" },
+  "optionsRetryLabel": { "message": "失敗したURLを再試行" },
+  "optionsRetryHint": { "message": "最大3回まで代替URLで再試行します。" },
+  "optionsCreatorTitle": { "message": "クリエイタースポットライト" },
+  "optionsCreatorBlurb": { "message": "開発者の<strong>Anachter</strong>です。Pixiv一括ダウンローダー以外の作品もぜひご覧ください。" },
+  "optionsCreatorSiteDescription": { "message": "ポートフォリオ、ブログ、開発中のツールはこちら。" },
+  "optionsVisitSite": { "message": "サイトを見る" },
+  "optionsProjectsTitle": { "message": "そのほかのプロジェクト" },
+  "optionsProjectsKuronekoAI": { "message": "Kuroneko AI — 猫のようなアシスタント。" },
+  "optionsSupportTitle": { "message": "サポートとフィードバック" },
+  "optionsSupportBugs": { "message": "バグを報告" },
+  "optionsSupportFeature": { "message": "機能をリクエスト" },
+  "optionsSupportChangelog": { "message": "変更履歴を見る" },
+  "optionsResetLabel": { "message": "既定に戻す" },
+  "optionsSaved": { "message": "設定を保存しました" },
+  "optionsReset": { "message": "設定を既定に戻しました" },
+  "optionsError": { "message": "エラーが発生しました。もう一度お試しください。" }
+}

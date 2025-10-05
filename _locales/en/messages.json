@@ -1,0 +1,159 @@
+{
+  "extName": {
+    "message": "Pixiv Bulk Downloader"
+  },
+  "extDescription": {
+    "message": "Download every image from the current Pixiv artwork in a single click."
+  },
+  "actionTitle": {
+    "message": "Download Pixiv images"
+  },
+  "overlayAriaLabel": {
+    "message": "Download Pixiv images"
+  },
+  "dialogTitle": {
+    "message": "Download images"
+  },
+  "dialogSummary": {
+    "message": "Found $COUNT$ images. All are selected by default.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "dialogOptionAll": {
+    "message": "All images"
+  },
+  "dialogOptionRange": {
+    "message": "Specific range"
+  },
+  "dialogErrorInvalidNumbers": {
+    "message": "Please enter valid numbers."
+  },
+  "dialogErrorRangeOrder": {
+    "message": "Start value must be less than or equal to end."
+  },
+  "dialogButtonCancel": {
+    "message": "Cancel"
+  },
+  "dialogButtonConfirm": {
+    "message": "Download"
+  },
+  "toastRangeEmpty": {
+    "message": "The selected range contains no images."
+  },
+  "toastDownloadStartFailed": {
+    "message": "The download couldn’t be started."
+  },
+  "toastDownloadingCount": {
+    "message": "Downloading $COUNT$ images...",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorMissingPreload": {
+    "message": "Pixiv preload metadata is missing."
+  },
+  "errorParsePreload": {
+    "message": "Failed to parse Pixiv metadata: $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoIllustrationData": {
+    "message": "The current page does not expose illustration data."
+  },
+  "errorNoDownloadableImages": {
+    "message": "No downloadable images were found on this artwork."
+  },
+  "errorUnsupportedPage": {
+    "message": "This extension only supports Pixiv artwork detail pages."
+  },
+  "errorDataFetchFailed": {
+    "message": "Pixiv data could not be retrieved."
+  },
+  "errorPixivRequestFailed": {
+    "message": "Pixiv request failed ($STATUS$).",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorPixivResponse": {
+    "message": "Pixiv returned an error."
+  },
+  "errorNoAjaxBody": {
+    "message": "Pixiv illustration data was not found."
+  },
+  "fallbackArtworkTitle": {
+    "message": "Pixiv Artwork $ILLUSTID$",
+    "placeholders": {
+      "illustid": {
+        "content": "$1"
+      }
+    }
+  },
+  "fallbackUnknownCreator": {
+    "message": "Unknown Creator"
+  },
+  "errorDownloadImageFailed": {
+    "message": "Failed to fetch image ($STATUS$).",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorActiveTabMissing": {
+    "message": "Could not find an active tab."
+  },
+  "errorNoImagesForDownload": {
+    "message": "No images were found to download."
+  },
+  "errorUnknown": {
+    "message": "Unknown error."
+  },
+  "optionsTitle": { "message": "Pixiv Bulk Downloader Settings" },
+  "optionsHeading": { "message": "Pixiv Bulk Downloader" },
+  "optionsSubheading": { "message": "Customize how downloads behave and discover more projects." },
+  "optionsGeneralTitle": { "message": "General preferences" },
+  "optionsLanguageLabel": { "message": "Interface language" },
+  "optionsLanguageEn": { "message": "English" },
+  "optionsLanguageJa": { "message": "日本語" },
+  "optionsLanguageZhCN": { "message": "简体中文" },
+  "optionsLanguageHint": { "message": "Override the locale used for the overlay and toolbar." },
+  "optionsRangeLabel": { "message": "Default page range" },
+  "optionsRangeAll": { "message": "Download all pages" },
+  "optionsRangePrompt": { "message": "Ask every time" },
+  "optionsRangeCustom": { "message": "Use custom range" },
+  "optionsRangeHint": { "message": "When set to \"custom\", the overlay remembers your last range." },
+  "optionsAntiTheftLabel": { "message": "Add anti-theft suffix to filenames" },
+  "optionsAntiTheftHint": { "message": "Appends _pixiv-only to each saved file." },
+  "optionsOverlayLabel": { "message": "Show on-canvas download button" },
+  "optionsOverlayHint": { "message": "Disable if you prefer using the toolbar icon only." },
+  "optionsDownloadTitle": { "message": "Download behavior" },
+  "optionsRootFolderLabel": { "message": "Root folder name" },
+  "optionsRootFolderHint": { "message": "Defaults to \"Pixiv\". Windows-reserved names are sanitized automatically." },
+  "optionsRetryLabel": { "message": "Retry failed URLs" },
+  "optionsRetryHint": { "message": "Makes up to 3 extra attempts using alternate URLs before giving up." },
+  "optionsCreatorTitle": { "message": "Creator spotlight" },
+  "optionsCreatorBlurb": { "message": "Hi! I’m <strong>Plus</strong>(Anachter), the developer behind Pixiv Bulk Downloader. I made this extension because I was too lazy to right click and download 9 images :3" },
+  "optionsCreatorSiteDescription": { "message": "Portfolio, blog posts, and upcoming tools." },
+  "optionsVisitSite": { "message": "Visit site" },
+  "optionsProjectsTitle": { "message": "Other projects" },
+  "optionsProjectsKuronekoAI": { "message": "Kuroneko AI — a cat-like assistant." },
+  "optionsSupportTitle": { "message": "Support & feedback" },
+  "optionsSupportBugs": { "message": "Report a bug" },
+  "optionsSupportFeature": { "message": "Request a feature" },
+  "optionsSupportChangelog": { "message": "Read the changelog" },
+  "optionsResetLabel": { "message": "Reset to defaults" },
+  "optionsSaved": { "message": "Settings saved" },
+  "optionsReset": { "message": "Settings restored" },
+  "optionsError": { "message": "Something went wrong, please try again." }
+}

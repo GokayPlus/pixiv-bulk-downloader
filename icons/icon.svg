@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Pixiv Bulk Downloader">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d9bf0" />
+      <stop offset="100%" stop-color="#0057d9" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)" opacity="0.95" />
+  <path fill="#ffffff" d="M64 26c-16.568 0-30 12.983-30 29h12c0-9.374 8.042-17 18-17s18 7.626 18 17c0 7.314-4.67 13.607-11.29 16.064L68 68v-8h-8v20h21v-8h-5.324C81.57 68.267 90 57.86 90 45 90 38.842 87.633 32.98 83.43 28.57 79.227 24.16 72.974 21 66 21z" />
+  <path fill="#ffffff" d="M64 70l-24 24h14v14h20v-14h14z" />
+</svg>

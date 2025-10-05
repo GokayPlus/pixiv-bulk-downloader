@@ -1,0 +1,159 @@
+{
+  "extName": {
+    "message": "Pixiv 批量下载器"
+  },
+  "extDescription": {
+    "message": "一键下载当前 Pixiv 作品页面的全部图片。"
+  },
+  "actionTitle": {
+    "message": "下载 Pixiv 图片"
+  },
+  "overlayAriaLabel": {
+    "message": "下载 Pixiv 图片"
+  },
+  "dialogTitle": {
+    "message": "下载图片"
+  },
+  "dialogSummary": {
+    "message": "找到 $COUNT$ 张图片，默认会全部选中。",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "dialogOptionAll": {
+    "message": "全部图片"
+  },
+  "dialogOptionRange": {
+    "message": "指定范围"
+  },
+  "dialogErrorInvalidNumbers": {
+    "message": "请输入有效的数字。"
+  },
+  "dialogErrorRangeOrder": {
+    "message": "开始值必须小于或等于结束值。"
+  },
+  "dialogButtonCancel": {
+    "message": "取消"
+  },
+  "dialogButtonConfirm": {
+    "message": "下载"
+  },
+  "toastRangeEmpty": {
+    "message": "所选范围内没有图片。"
+  },
+  "toastDownloadStartFailed": {
+    "message": "无法开始下载。"
+  },
+  "toastDownloadingCount": {
+    "message": "正在下载 $COUNT$ 张图片...",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorMissingPreload": {
+    "message": "未找到 Pixiv 预加载元数据。"
+  },
+  "errorParsePreload": {
+    "message": "解析 Pixiv 元数据失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorNoIllustrationData": {
+    "message": "当前页面未公开插画数据。"
+  },
+  "errorNoDownloadableImages": {
+    "message": "此作品中未找到可下载的图片。"
+  },
+  "errorUnsupportedPage": {
+    "message": "此扩展仅支持 Pixiv 作品详情页。"
+  },
+  "errorDataFetchFailed": {
+    "message": "无法获取 Pixiv 数据。"
+  },
+  "errorPixivRequestFailed": {
+    "message": "Pixiv 请求失败（$STATUS$）。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorPixivResponse": {
+    "message": "Pixiv 返回了一个错误。"
+  },
+  "errorNoAjaxBody": {
+    "message": "未找到 Pixiv 插画数据。"
+  },
+  "fallbackArtworkTitle": {
+    "message": "Pixiv 作品 $ILLUSTID$",
+    "placeholders": {
+      "illustid": {
+        "content": "$1"
+      }
+    }
+  },
+  "fallbackUnknownCreator": {
+    "message": "创作者未知"
+  },
+  "errorDownloadImageFailed": {
+    "message": "获取图片失败（$STATUS$）。",
+    "placeholders": {
+      "status": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorActiveTabMissing": {
+    "message": "找不到活动标签页。"
+  },
+  "errorNoImagesForDownload": {
+    "message": "没有可下载的图片。"
+  },
+  "errorUnknown": {
+    "message": "未知错误。"
+  },
+  "optionsTitle": { "message": "Pixiv 批量下载器设置" },
+  "optionsHeading": { "message": "Pixiv 批量下载器" },
+  "optionsSubheading": { "message": "自定义下载行为，顺便看看开发者的其他项目。" },
+  "optionsGeneralTitle": { "message": "常规设置" },
+  "optionsLanguageLabel": { "message": "界面语言" },
+  "optionsLanguageEn": { "message": "English" },
+  "optionsLanguageJa": { "message": "日本語" },
+  "optionsLanguageZhCN": { "message": "简体中文" },
+  "optionsLanguageHint": { "message": "覆盖叠加层和工具栏显示的语言。" },
+  "optionsRangeLabel": { "message": "默认页面范围" },
+  "optionsRangeAll": { "message": "下载全部页面" },
+  "optionsRangePrompt": { "message": "每次询问" },
+  "optionsRangeCustom": { "message": "使用自定义范围" },
+  "optionsRangeHint": { "message": "选择“自定义”时，会记住你上次输入的范围。" },
+  "optionsAntiTheftLabel": { "message": "在文件名中添加防盗后缀" },
+  "optionsAntiTheftHint": { "message": "为每个文件追加 _pixiv-only。" },
+  "optionsOverlayLabel": { "message": "显示画布下载按钮" },
+  "optionsOverlayHint": { "message": "如果只想用工具栏图标，可以关闭。" },
+  "optionsDownloadTitle": { "message": "下载行为" },
+  "optionsRootFolderLabel": { "message": "根文件夹名称" },
+  "optionsRootFolderHint": { "message": "默认是“Pixiv”。会自动规避 Windows 保留名称。" },
+  "optionsRetryLabel": { "message": "重试失败的链接" },
+  "optionsRetryHint": { "message": "在放弃前，使用备用地址最多重试 3 次。" },
+  "optionsCreatorTitle": { "message": "创作者推荐" },
+  "optionsCreatorBlurb": { "message": "你好，我是<strong>Anachter</strong>，Pixiv 批量下载器的作者。欢迎看看其他项目。" },
+  "optionsCreatorSiteDescription": { "message": "作品集、博客以及正在开发的工具。" },
+  "optionsVisitSite": { "message": "访问网站" },
+  "optionsProjectsTitle": { "message": "其他项目" },
+  "optionsProjectsKuronekoAI": { "message": "Kuroneko AI — 猫一样的助手。" },
+  "optionsSupportTitle": { "message": "支持与反馈" },
+  "optionsSupportBugs": { "message": "报告问题" },
+  "optionsSupportFeature": { "message": "提出新功能" },
+  "optionsSupportChangelog": { "message": "查看更新日志" },
+  "optionsResetLabel": { "message": "恢复默认" },
+  "optionsSaved": { "message": "设置已保存" },
+  "optionsReset": { "message": "设置已恢复为默认值" },
+  "optionsError": { "message": "出错了，请再试一次。" }
+}
