@@ -1,5 +1,8 @@
 const browserApi = typeof browser !== "undefined" ? browser : chrome;
 const IS_CHROME = typeof browser === "undefined";
+const actionApi = (typeof browserApi !== "undefined" && browserApi)
+  ? (browserApi.action || browserApi.browserAction || null)
+  : null;
 
 const SUPPORTED_LANGUAGES = new Set(["en", "ja", "zh_CN"]);
 const DEFAULT_LANGUAGE = "en";
@@ -561,29 +564,46 @@ function tabsSendMessage(tabId, message) {
 }
 
 function executeContentScript(tabId) {
-  if (!browserApi.scripting) {
-    return Promise.resolve();
-  }
+  if (browserApi?.scripting && typeof browserApi.scripting.executeScript === "function") {
+    const params = {
+      target: { tabId },
+      files: ["content/pixiv-scraper.js"]
+    };
 
-  const params = {
-    target: { tabId },
-    files: ["content/pixiv-scraper.js"]
-  };
+    if (!IS_CHROME) {
+      return browserApi.scripting.executeScript(params).then(() => undefined);
+    }
 
-  if (!IS_CHROME) {
-    return browserApi.scripting.executeScript(params).then(() => undefined);
-  }
-
-  return new Promise((resolve, reject) => {
-    chrome.scripting.executeScript(params, () => {
-      const err = chrome.runtime.lastError;
-      if (err) {
-        reject(new Error(err.message));
-        return;
-      }
-      resolve();
+    return new Promise((resolve, reject) => {
+      chrome.scripting.executeScript(params, () => {
+        const err = chrome.runtime.lastError;
+        if (err) {
+          reject(new Error(err.message));
+          return;
+        }
+        resolve();
+      });
     });
-  });
+  }
+
+  if (browserApi?.tabs?.executeScript) {
+    return new Promise((resolve, reject) => {
+      try {
+        browserApi.tabs.executeScript(tabId, { file: "content/pixiv-scraper.js" }, () => {
+          const err = browserApi.runtime?.lastError || (typeof chrome !== "undefined" ? chrome.runtime?.lastError : undefined);
+          if (err) {
+            reject(new Error(err.message));
+            return;
+          }
+          resolve();
+        });
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  return Promise.resolve();
 }
 
 function downloadsDownload(options) {
@@ -604,8 +624,12 @@ function downloadsDownload(options) {
 }
 
 function setBadgeText(tabId, text) {
+  if (!actionApi || !tabId) {
+    return;
+  }
+
   try {
-    const result = browserApi.action.setBadgeText({ tabId, text });
+    const result = actionApi.setBadgeText({ tabId, text });
     if (result && typeof result.then === "function") {
       result.catch(() => {});
     }
@@ -615,8 +639,12 @@ function setBadgeText(tabId, text) {
 }
 
 function setBadgeColor(tabId, color) {
+  if (!actionApi || !tabId) {
+    return;
+  }
+
   try {
-    const result = browserApi.action.setBadgeBackgroundColor({ tabId, color });
+    const result = actionApi.setBadgeBackgroundColor({ tabId, color });
     if (result && typeof result.then === "function") {
       result.catch(() => {});
     }
@@ -938,7 +966,9 @@ ensureSettingsLoaded().catch((err) => {
   console.warn("Failed to load initial settings", err);
 });
 
-browserApi.action.onClicked.addListener(handleAction);
+if (actionApi?.onClicked && typeof actionApi.onClicked.addListener === "function") {
+  actionApi.onClicked.addListener(handleAction);
+}
 
 browserApi.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (!message) {
