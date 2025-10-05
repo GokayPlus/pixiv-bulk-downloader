@@ -46,14 +46,12 @@ Whether you're archiving your favorite artist's work or building a personal coll
 3. Select the `manifest.json` file inside the `pixivinstall` folder.
 4. Optional: pin the extension icon from the toolbar menu.
 
-#### Uploading to Firefox Add-ons (AMO)
+#### Note for user of Firefox Add-ons (AMO)
 
 Firefox currently requires Manifest V2 packages for public listings. A ready-to-use MV2 manifest is included as `manifest.firefox.json`.
 
 1. Duplicate or export the project to a separate folder dedicated to the Firefox build.
 2. Replace the root `manifest.json` with a copy of `manifest.firefox.json` (rename the file to `manifest.json`).
-3. Review the permissions – MV2 uses `browser_action` and drops the Manifest V3-specific `declarativeNetRequest` entry.
-4. Zip the folder contents and upload the archive to [Firefox Add-ons Developer Hub](https://addons.mozilla.org/developers/).
 
 The regular Chromium build continues to use the default MV3 `manifest.json`.
 
@@ -87,3 +85,4 @@ The regular Chromium build continues to use the default MV3 `manifest.json`.
 - If the Pixiv page doesn’t expose preload metadata, the extension automatically falls back to the official Ajax endpoints.
 
 - The extension defaults to English; override in settings to switch to Japanese or Simplified Chinese.
+
