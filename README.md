@@ -19,7 +19,7 @@ Whether you're archiving your favorite artist's work or building a personal coll
 
 - Parses Pixiv’s embedded metadata (with Ajax fallback) to collect the original-resolution image URLs.
 - Handles both single and multi-page illustrations, plus ugoira ZIP assets.
-- Creates a tidy folder structure: `Pixiv/<artist>/<illustId>-<title>/...`.
+- Creates a tidy folder structure: `Pixiv/<artist>/<illustId>-<title>/...`
 - Floating download button appears on the artwork preview and opens a range selector (defaults to all pages).
 - Visual badge feedback during the download process.
 - Localized interface: English (default), Japanese, and Simplified Chinese.
@@ -85,5 +85,6 @@ The regular Chromium build continues to use the default MV3 `manifest.json`.
 - If the Pixiv page doesn’t expose preload metadata, the extension automatically falls back to the official Ajax endpoints.
 
 - The extension defaults to English; override in settings to switch to Japanese or Simplified Chinese.
+
 
 
