@@ -71,7 +71,8 @@ Whether you're archiving your favorite artist's work or building a personal coll
 - You must already be logged in to Pixiv in the browser for restricted posts.
 - For animated ugoira posts, the original ZIP is downloaded; extracting frames requires external tools.
 - The extension doesn’t yet process Pixiv novels or other non-illustration URLs.
-- Large batches rely on the browser download manager—pausing or resuming happens there.
+- Large batches rely on the browser download manager/pausing or resuming happens there.
 - Range selection is 1-indexed and inclusive; leaving the defaults will download everything.
 - If the Pixiv page doesn’t expose preload metadata, the extension automatically falls back to the official Ajax endpoints.
+
 - The extension defaults to English; override in settings to switch to Japanese or Simplified Chinese.
