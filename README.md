@@ -31,7 +31,7 @@ Whether you're archiving your favorite artist's work or building a personal coll
 
 ### Chromium browsers (Chrome, Edge, Brave, Vivaldi)
 
-You can download from (Chrome Web Store)[https://chromewebstore.google.com/detail/pixiv-bulk-downloader/iclpndphgnchnhomhikoooihkgebjhnk] with just one click.
+You can download from [Chrome Web Store](https://chromewebstore.google.com/detail/pixiv-bulk-downloader/iclpndphgnchnhomhikoooihkgebjhnk) with just one click.
 
 Manual Installation:
 1. Open the browser’s extensions page:
@@ -44,7 +44,7 @@ Manual Installation:
 
 ### Firefox
 
-You can download from (Firefox Addons)[https://addons.mozilla.org/en-US/firefox/addon/pixiv-bulk-downloader/] with just one click.
+You can download from [Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/pixiv-bulk-downloader/) with just one click.
 
 Manual Installation:
 1. Enter `about:debugging#/runtime/this-firefox` in the address bar.
@@ -91,6 +91,7 @@ The regular Chromium build continues to use the default MV3 `manifest.json`.
 - If the Pixiv page doesn’t expose preload metadata, the extension automatically falls back to the official Ajax endpoints.
 
 - The extension defaults to English; override in settings to switch to Japanese or Simplified Chinese.
+
 
 
 
